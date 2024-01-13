@@ -1,3 +1,4 @@
+@import "nipponcolors.min.css";
 @font-face {
   font-family: "Advocate Ancient Serif";
   font-weight: 700;
@@ -13,19 +14,18 @@
   font-weight: normal;
   src: url("ChiuKongGothic-M-Regular.subset.woff2") format("woff2");
 }
-
+:root {
+  --ming: "Advocate Ancient Serif", serif;
+}
 body {
   font-family: "Helvetica", "Open Sans", "Arial", "ChiuKong Gothic MN",
     sans-serif;
-  --ming: "Advocate Ancient Serif", serif;
 }
 
 #headline {
-  color: white;
   height: 600px;
   background-image: url(background-pc.jpg);
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center;
   background-size: cover;
 }
 
@@ -41,6 +41,7 @@ u.dotted {
 
 #headline h1,
 #headline h2 {
+  color: var(--nc-shironeri);
   text-shadow: 1px 1px 4px black;
 }
 
@@ -60,7 +61,6 @@ u.dotted {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  background-color: #e7def7;
 }
 
 .code-container pre,
@@ -107,4 +107,41 @@ kbd:hover {
 .downloadBtn {
   height: 1.8rem;
   vertical-align: -0.5rem;
+}
+
+div.scr {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+div.scr > div {
+  width: 100%;
+}
+
+#introduction1 {
+  background-color: var(--nc-hanada);
+  color: var(--nc-shironeri);
+
+  background-image: url("nguphing-bg.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+#vocabulary {
+  background-color: var(--nc-rurikon);
+  color: var(--nc-shironeri);
+
+  background-image: url("vocab-bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+
+  text-shadow: 0px 0px 4px var(--nc-rurikon);
+}
+
+footer {
+  background-color: var(--nc-kon);
+  color: var(--bs-body-color);
 }
