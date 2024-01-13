@@ -5,6 +5,11 @@
   src: url("AdvocateAncientSerif-Heavy.subset.woff2") format("woff2");
 }
 @font-face {
+  font-family: "LXGW WenKai TC";
+  src: url("LXGWWenKaiTC-Bold.subset.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
   font-family: "ChiuKong Gothic MN";
   font-weight: 300;
   src: url("ChiuKongGothic-M-Light.subset.woff2") format("woff2");
@@ -19,7 +24,9 @@
 }
 body {
   font-family: "Helvetica", "Open Sans", "Arial", "ChiuKong Gothic MN",
-    sans-serif;
+    noto sans cjk kr, source han sans kr, noto sans cjk tc, source han sans tc,
+    noto sans cjk sc, source han sans cn, pingfang tc, hiragino sans gb,
+    microsoft jhenghei, wenquanyi micro hei, st heiti, SimHei, sans-serif;
 }
 
 #headline {
@@ -38,11 +45,15 @@ body {
 u.dotted {
   text-decoration: underline dotted;
 }
-
+#githubstatus,
 #headline h1,
 #headline h2 {
   color: var(--nc-shironeri);
   text-shadow: 1px 1px 4px black;
+}
+
+#githubstatus > a {
+  color: inherit;
 }
 
 #headline h1 {
@@ -91,18 +102,11 @@ kbd {
   line-height: 1;
   min-width: 0.75rem;
   display: inline-block;
-  text-align: center;
-  padding: 2px 5px;
-  position: relative;
-  top: -3px;
-}
-kbd:hover {
-  box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
-  top: -1px;
-}
-#install {
-  max-width: 740px;
-  line-height: 2em;
+  text-align: center;@font-face {
+    font-family: "Advocate Ancient Serif";
+    font-weight: 700;
+    src: url("AdvocateAncientSerif-Heavy.subset.woff2") format("woff2");
+  }
 }
 .downloadBtn {
   height: 1.8rem;
@@ -144,4 +148,12 @@ div.scr > div {
 footer {
   background-color: var(--nc-kon);
   color: var(--bs-body-color);
+}
+
+.scn {
+  font-family: "LXGW WenKai TC", noto sans cjk kr, source han sans kr,
+    noto sans cjk tc, source han sans tc, noto sans cjk sc, source han sans cn,
+    pingfang tc, hiragino sans gb, microsoft jhenghei, wenquanyi micro hei,
+    st heiti, SimHei, sans-serif;
+  font-weight: bold;
 }
