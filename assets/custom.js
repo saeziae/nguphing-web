@@ -16,8 +16,10 @@ clipboard.on("success", function (e) {
   successCopy(e.trigger);
 });
 
-var paragraph = document.getElementById("dtyg");
-paragraph.innerHTML = paragraph.innerHTML.split("").reverse().join("");
+function showEmail() {
+  var paragraph = document.getElementById("dtyg");
+  paragraph.innerHTML = paragraph.innerHTML.split("").reverse().join("");
+}
 
 function toSucieuNumeric(input) {
   const inputString = input.toString();
@@ -99,4 +101,45 @@ async function printgithubstatus() {
     githubstatus.style.display = "block";
   }
 }
-printgithubstatus();
+
+// Function to activate tab based on User Agent
+function activateTabBasedOnUA() {
+  const triggerTabList = document.querySelectorAll("#pills-tab button");
+  triggerTabList.forEach((triggerEl) => {
+    const tabTrigger = new bootstrap.Tab(triggerEl);
+
+    triggerEl.addEventListener("click", (event) => {
+      event.preventDefault();
+      tabTrigger.show();
+    });
+  });
+
+  var userAgent = navigator.userAgent.toLowerCase();
+
+  function showTab(tabId) {
+    var tab = document.querySelector("#installInstruction-" + tabId + "-tab");
+    bootstrap.Tab.getInstance(tab).show();
+  }
+
+  if (userAgent.includes("windows")) {
+    showTab("weasel");
+  } else if (userAgent.includes("macintosh") || userAgent.includes("mac os")) {
+    showTab("squerrel");
+  } else if (userAgent.includes("android")) {
+    showTab("trime");
+  } else if (userAgent.includes("linux")) {
+    showTab("fcitx5");
+  } else if (
+    userAgent.includes("iphone") ||
+    userAgent.includes("ipad") ||
+    userAgent.includes("ipod")
+  ) {
+    showTab("hamster");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  showEmail();
+  activateTabBasedOnUA();
+  printgithubstatus();
+});

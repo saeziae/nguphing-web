@@ -257,9 +257,11 @@ function inputLoop(i) {
     if (--i) inputLoop(i);
   }, 150);
 }
-
-inputLoop(inputInterface.length);
-
-setInterval(() => {
+document.addEventListener("DOMContentLoaded", function () {
   inputLoop(inputInterface.length);
-}, inputInterface.length * 300);
+
+  setInterval(() => {
+    inputLoop(inputInterface.length);
+  }, inputInterface.length * 300);
+  
+});
