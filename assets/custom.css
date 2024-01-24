@@ -5,6 +5,12 @@
   src: url("AdvocateAncientSerif-Heavy.subset.woff2") format("woff2");
 }
 @font-face {
+  font-family: "ChiuKong Gothic MN";
+  src: url("WuSupplement.woff2") format("woff2");
+  unicode-range: U+21372;
+  font-weight: normal;
+}
+@font-face {
   font-family: "LXGW WenKai TC";
   src: url("LXGWWenKaiTC-Bold.subset.woff2") format("woff2");
   font-weight: bold;
@@ -19,9 +25,11 @@
   font-weight: normal;
   src: url("ChiuKongGothic-M-Regular.subset.woff2") format("woff2");
 }
+
 :root {
   --ming: "Advocate Ancient Serif", serif;
 }
+
 body {
   font-family: "Helvetica", "Open Sans", "Arial", "ChiuKong Gothic MN",
     noto sans cjk kr, source han sans kr, noto sans cjk tc, source han sans tc,
