@@ -102,12 +102,16 @@ kbd {
   line-height: 1;
   min-width: 0.75rem;
   display: inline-block;
-  text-align: center;@font-face {
-    font-family: "Advocate Ancient Serif";
-    font-weight: 700;
-    src: url("AdvocateAncientSerif-Heavy.subset.woff2") format("woff2");
-  }
+  text-align: center;
+  padding: 2px 5px;
+  position: relative;
+  top: -3px;
 }
+kbd:hover {
+  box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+  top: -1px;
+}
+
 .downloadBtn {
   height: 1.8rem;
   vertical-align: -0.5rem;

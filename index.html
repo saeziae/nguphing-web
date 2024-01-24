@@ -103,7 +103,14 @@
             <button class="nav-link" id="installInstruction-trime-tab" data-bs-toggle="pill"
               data-bs-target="#installInstruction-trime" type="button" role="tab"
               aria-controls="installInstruction-trime" aria-selected="false">
-              Android
+              Android(TRIME)
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="installInstruction-fcitx5fa-tab" data-bs-toggle="pill"
+              data-bs-target="#installInstruction-fcitx5fa" type="button" role="tab"
+              aria-controls="installInstruction-fcitx5fa" aria-selected="false">
+              Fcitx5 for Android
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -653,8 +660,67 @@ curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | rim
               <li>應該可以用爻</li>
             </ul>
           </div>
+          <div class="tab-pane fade" id="installInstruction-fcitx5fa" role="tabpanel"
+            aria-labelledby="installInstruction-fcitx5fa" tabindex="0">
+            <div class="alert alert-warning" role="alert">
+              僅適合高級用戶。如果弗會得用，還請看 TIME 輸入法。
+            </div>
+            <ul>
+              <li>從
+                <a href="https://f-droid.org/packages/org.fcitx.fcitx5.android"><img src="assets/fdroid.svg"
+                    alt="F-Droid" class="downloadBtn"></a>
+                或
+                <a href="https://github.com/fcitx5-android/fcitx5-android/releases"><img src="assets/github.svg"
+                    alt="Github" class="downloadBtn"></a>
+                下載 Fcitx5 for Android 安裝。
+              </li>
+              <li>從
+                <a href="https://f-droid.org/en/packages/org.fcitx.fcitx5.android.plugin.rime/"><img
+                    src="assets/fdroid.svg" alt="F-Droid" class="downloadBtn"></a>
+                或
+                <a href="https://github.com/fcitx5-android/fcitx5-android/releases"><img src="assets/github.svg"
+                    alt="Github" class="downloadBtn"></a>
+                下載 Fcitx5 for Android (RIME Plugin) 安裝。
+              </li>
+              <li>開啓輸入法个設置界面，在「輸入法」裏丄添加「Rime」</li>
+              <li>從
+                <a href="https://nguphing.estela.moe/download"><img
+                    src="https://img.shields.io/github/actions/workflow/status/saeziae/rime_nguphing/trime-datapack.yml?label=%E5%B0%81%E8%A3%9D%E7%A8%8B%E5%BC%8F&logo=github&style=for-the-badge"
+                    alt="該許" class="downloadBtn"></a>
+                下載數據包，解壓到手機內部存儲空間个 `Android/data/org.fcitx.fcitx5.android/files/data/rime/` 目錄底丄，可能需要借助電腦或使用特殊个文件管理器。
+              </li>
+              <li>從鍵盤頂欄撳
+                <span class="badge text-bg-secondary">...</span>
+                ，撳
+                <span class="badge text-bg-secondary">&lt;&nbsp;&gt;</span>
+                ，撳「重新部署」
+              </li>
+              <li>然後應該可以在扗
+                <span class="badge text-bg-secondary">&lt;&nbsp;&gt;</span>
+                下底看見「吳語拼音」爻。
+              </li>
+            </ul>
+            <h3>更新</h3>
+            <ul>
+              <li>從
+                <a href="https://nguphing.estela.moe/download"><img
+                    src="https://img.shields.io/github/actions/workflow/status/saeziae/rime_nguphing/trime-datapack.yml?label=%E5%B0%81%E8%A3%9D%E7%A8%8B%E5%BC%8F&logo=github&style=for-the-badge"
+                    alt="該許" class="downloadBtn"></a>
+                下載數據包，解壓到手機內部存儲空間个 `Android/data/org.fcitx.fcitx5.android/files/data/rime/` 目錄底丄，可能需要借助電腦或使用特殊个文件管理器。
+              </li>
+              <li>從鍵盤頂欄撳
+                <span class="badge text-bg-secondary">...</span>
+                ，撳
+                <span class="badge text-bg-secondary">&lt;&nbsp;&gt;</span>
+                ，撳「重新部署」
+              </li>
+            </ul>
+          </div>
           <div class="tab-pane fade" id="installInstruction-hamster" role="tabpanel"
             aria-labelledby="installInstruction-hamster" tabindex="0">
+            <div class="alert alert-warning" role="alert">
+              會得用到電腦。
+            </div>
             <ul>
               <li>
                 安裝倉輸入法(Hamster)
@@ -668,7 +734,8 @@ curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | rim
                 下載數據包
               </li>
               <li>使用軟件裏向个「Wi-Fi 上傳方案」，上傳數據包裏向个文件</li>
-              <li>使用軟件裏向个「輸入方案設置」，揀「吳語拼音」</li>
+              <li>撳軟件裏向个「RIME」，撳「重新部署」</li>
+              <li>撳軟件裏向个「輸入方案設置」，揀「吳語拼音」</li>
             </ul>
             <h3>更新</h3>
             <ul>
