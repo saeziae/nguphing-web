@@ -44,20 +44,27 @@ body {
   background-size: cover;
 }
 
-@media screen and (max-width: 540px) {
-  #headline {
-    background-image: url(background-mo.jpg);
-  }
-}
-
-u.dotted {
-  text-decoration: underline dotted;
-}
 #githubstatus,
 #headline h1,
 #headline h2 {
   color: var(--nc-shironeri);
   text-shadow: 1px 1px 4px black;
+}
+
+@media screen and (max-width: 540px) {
+  #headline {
+    background-image: url(background-mo.jpg);
+  }
+  #githubstatus,
+  #headline h1,
+  #headline h2 {
+    color: var(--nc-sumi);
+    text-shadow: 1px 1px 4px white;
+  }
+}
+
+u.dotted {
+  text-decoration: underline dotted;
 }
 
 #githubstatus > a {
