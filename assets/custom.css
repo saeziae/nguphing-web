@@ -84,6 +84,8 @@ u.dotted {
 }
 
 .code-container {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
